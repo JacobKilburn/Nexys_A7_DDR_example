@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1746198699">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1746211336">
   <File Type="PA-TCL" Name="DDR_example_top.tcl"/>
   <File Type="REPORTS-TCL" Name="DDR_example_top_reports.tcl"/>
   <File Type="INIT-TIMING" Name="DDR_example_top_timing_summary_init.rpt"/>
@@ -121,10 +121,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/ip/mig/mig_a.prj">
+    <File Path="$PSRCDIR/sources_1/ip/mig_ddr/mig_a.prj">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="ScopedToCell" Val="mig"/>
+        <Attr Name="ScopedToCell" Val="mig_ddr"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/mig_ddr/mig_b.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="mig_ddr"/>
       </FileInfo>
     </File>
     <Config>
@@ -172,5 +178,5 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="pll"/>
-  <BlockFileSet Type="BlockSrcs" Name="mig"/>
+  <BlockFileSet Type="BlockSrcs" Name="mig_ddr"/>
 </GenRun>

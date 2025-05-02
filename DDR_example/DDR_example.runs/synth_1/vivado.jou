@@ -3,8 +3,8 @@
 # SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
 # IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
 # SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-# Start of session at: Fri May  2 11:11:04 2025
-# Process ID         : 25864
+# Start of session at: Fri May  2 14:42:18 2025
+# Process ID         : 13700
 # Current directory  : C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.runs/synth_1
 # Command line       : vivado.exe -log DDR_example_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DDR_example_top.tcl
 # Log file           : C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.runs/synth_1/DDR_example_top.vds
@@ -19,6 +19,6 @@
 # Host memory        : 34033 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36180 MB
-# Available Virtual  : 19442 MB
+# Available Virtual  : 20761 MB
 #-----------------------------------------------------------
 source DDR_example_top.tcl -notrace

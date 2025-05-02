@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Fri May  2 13:14:02 2025
+# Process ID         : 10236
+# Current directory  : C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.runs/mig_ddr_synth_1
+# Command line       : vivado.exe -log mig_ddr.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mig_ddr.tcl
+# Log file           : C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.runs/mig_ddr_synth_1/mig_ddr.vds
+# Journal file       : C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.runs/mig_ddr_synth_1\vivado.jou
+# Running On         : engr-d1450-007
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34033 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36180 MB
+# Available Virtual  : 20973 MB
+#-----------------------------------------------------------
+source mig_ddr.tcl -notrace

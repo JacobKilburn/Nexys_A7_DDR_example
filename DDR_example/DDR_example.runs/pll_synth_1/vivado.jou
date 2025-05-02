@@ -3,8 +3,8 @@
 # SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
 # IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
 # SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-# Start of session at: Fri May  2 10:01:21 2025
-# Process ID         : 25048
+# Start of session at: Fri May  2 13:15:27 2025
+# Process ID         : 26192
 # Current directory  : C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.runs/pll_synth_1
 # Command line       : vivado.exe -log pll.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pll.tcl
 # Log file           : C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.runs/pll_synth_1/pll.vds
@@ -19,6 +19,6 @@
 # Host memory        : 34033 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36180 MB
-# Available Virtual  : 20647 MB
+# Available Virtual  : 20952 MB
 #-----------------------------------------------------------
 source pll.tcl -notrace

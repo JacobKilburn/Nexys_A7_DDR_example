@@ -57,7 +57,7 @@ module mem_example(
     reg[7:0] mem_wdf_mask;
     wire mem_wdf_rdy;
 
-    mig mig1 (
+    mig_ddr mig1 (
         .ddr2_addr(ddr2_addr),
         .ddr2_ba(ddr2_ba),
         .ddr2_cas_n(ddr2_cas_n),

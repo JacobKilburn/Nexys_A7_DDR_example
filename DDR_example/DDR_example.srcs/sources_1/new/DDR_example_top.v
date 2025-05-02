@@ -73,6 +73,8 @@ module DDR_example_top(
     reg[63:0] mem_d_to_ram;
     reg[1:0] mem_transaction_width;
     reg mem_wstrobe, mem_rstrobe;
+    reg [15:0] ledreg;
+    assign led = ledreg;
     
     mem_example mem_ex(
         .clk_mem(clk_mem),
@@ -104,15 +106,37 @@ module DDR_example_top(
         .ready(mem_ready)
         );
 
-    //////////  Traffic Generator  //////////
-    reg[31:0] lfsr;
+    //////////  Traffic Generator  //////////  
+    
+    reg [27:0] mem_addr_input;
+    reg [63:0] mem_d_to_ram_input;  
+    reg write;
+    initial write = 1;
+    reg writestart;
+    reg writeACK;
+    reg read;
+    initial read = 0;
+    reg readstart;
+    reg readACK;
 
-    always @(posedge clk_cpu or negedge rst_n) begin
-        if(~rst_n) lfsr <= 32'h0;
-        else begin
-            lfsr[31:1] <= lfsr[30:0];
-            lfsr[0] <= ~^{lfsr[31], lfsr[21], lfsr[1:0]};
+    always @(posedge clk_cpu) begin
+        mem_addr_input = 0;
+        mem_d_to_ram_input = {64'hFFFFFFFFFFFFFFFF};
+        if (write) begin
+            writestart = 1;
+            write = 0;
+        end else if (writeACK) begin
+            writestart = 0;
+            read = 1;
         end
+        
+        if (read) begin
+            readstart = 1;
+            read = 0;
+        end else if (readACK) begin
+            readstart = 0;
+        end
+        
     end
 
     localparam TGEN_GEN_AD = 3'h0; 
@@ -136,9 +160,15 @@ module DDR_example_top(
         end else begin
             case(tgen_state)
             TGEN_GEN_AD: begin
-                    mem_addr <= lfsr[27:0];
-                    mem_d_to_ram <= {~lfsr,lfsr};
-                    tgen_state <= TGEN_WRITE;
+                    writeACK <= 0;
+                    readACK <= 0;
+                    mem_addr <= mem_addr_input;
+                    mem_d_to_ram <= mem_d_to_ram_input;
+                    if (writestart) begin
+                        tgen_state <= TGEN_WRITE;
+                    end else if (readstart) begin
+                        tgen_state <= TGEN_READ;
+                    end
                 end
             TGEN_WRITE: begin
                     if(mem_ready) begin
@@ -151,7 +181,10 @@ module DDR_example_top(
             TGEN_WWAIT: begin
                     mem_wstrobe <= 0;
                     if(mem_transaction_complete) begin
-                        tgen_state <= TGEN_READ;
+                        writeACK <= 1;
+                    end
+                    if (~writestart) begin
+                        tgen_state <= TGEN_GEN_AD;
                     end
                 end
             TGEN_READ: begin
@@ -165,9 +198,12 @@ module DDR_example_top(
             TGEN_RWAIT: begin
                     mem_rstrobe <= 0;
                     if(mem_transaction_complete) begin
-                        tgen_state <= TGEN_GEN_AD; 
+                        readACK <= 1;
                         if(mem_d_from_ram[63:48] == mem_d_to_ram[63:48]) dequ <= 1;
                         else dequ <= 0;
+                    end
+                    if (~readstart) begin
+                        tgen_state <= TGEN_GEN_AD;
                     end
                 end
             endcase
@@ -175,5 +211,6 @@ module DDR_example_top(
     end
     
     assign led[0] = dequ;
+    
 
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-| Date                      : Fri May  2 11:12:18 2025
+| Date                      : Fri May  2 14:43:25 2025
 | Host                      : engr-d1450-007 running 64-bit major release  (build 9200)
 | Command                   : report_io -file DDR_example_top_io_placed.rpt
 | Design                    : DDR_example_top

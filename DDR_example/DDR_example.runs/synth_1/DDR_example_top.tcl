@@ -87,9 +87,9 @@ set_property used_in_implementation false [get_files -all c:/Users/jwk50866/Docu
 set_property used_in_implementation false [get_files -all c:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.srcs/ip/pll/pll.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.srcs/ip/pll/pll_ooc.xdc]
 
-read_ip -quiet C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.srcs/ip/mig/mig.xci
-set_property used_in_implementation false [get_files -all c:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/LRUCache.gen/sources_1/ip/mig/mig/user_design/constraints/mig.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/LRUCache.gen/sources_1/ip/mig/mig/user_design/constraints/mig_ooc.xdc]
+read_ip -quiet C:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.srcs/sources_1/ip/mig_ddr/mig_ddr.xci
+set_property used_in_implementation false [get_files -all c:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.gen/sources_1/ip/mig_ddr/mig_ddr/user_design/constraints/mig_ddr.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jwk50866/Documents/GitHub/Nexys_A7_DDR_example/DDR_example/DDR_example.gen/sources_1/ip/mig_ddr/mig_ddr/user_design/constraints/mig_ddr_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
