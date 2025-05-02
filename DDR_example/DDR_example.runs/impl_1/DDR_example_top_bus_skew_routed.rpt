@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Fri May  2 11:13:50 2025
+| Host         : engr-d1450-007 running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file DDR_example_top_bus_skew_routed.rpt -pb DDR_example_top_bus_skew_routed.pb -rpx DDR_example_top_bus_skew_routed.rpx
+| Design       : DDR_example_top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+
