@@ -1,9 +1,0 @@
-+====================+===================+===================================+
-| Launch Setup Clock | Launch Hold Clock | Pin                               |
-+====================+===================+===================================+
-| clk_cpu_pll        | clk_cpu_pll       | mem_ex/mem_wdf_mask_reg[7]/D      |
-| clk_cpu_pll        | clk_cpu_pll       | mem_ex/ws_sync/flag_sync_reg[0]/D |
-| clk_cpu_pll        | clk_cpu_pll       | mem_ex/mem_wdf_data_reg[63]/D     |
-| clk_cpu_pll        | clk_cpu_pll       | mem_ex/rs_sync/flag_sync_reg[0]/D |
-| clk_cpu_pll        | clk_cpu_pll       | mem_ex/mem_wdf_data_reg[15]/D     |
-+--------------------+-------------------+-----------------------------------+
