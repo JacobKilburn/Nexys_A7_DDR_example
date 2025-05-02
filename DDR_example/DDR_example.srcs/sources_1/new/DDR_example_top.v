@@ -42,7 +42,7 @@ module DDR_example_top(
     output[1:0] ddr2_dm,
     output ddr2_odt
     );
-    
+     
     //////////  Clock Generation  //////////
     wire clk_cpu, clk_mem;
     wire pll_locked;
